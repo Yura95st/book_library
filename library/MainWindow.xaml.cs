@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Configuration;
+using library_database_lib.Helpers;
+
 namespace library
 {
     /// <summary>
@@ -23,6 +26,14 @@ namespace library
         public MainWindow()
         {
             InitializeComponent();
+
+            // MS SQL Server Connection String
+            string SQL_CONNECTION_STRING = ConfigurationManager.
+                ConnectionStrings["DBLibrarySqlConnectionStrings"].ConnectionString;
+
+            BookDbHelper bookHelper = new BookDbHelper(SQL_CONNECTION_STRING);
+
+            bookHelper.GetAllBooks();
         }
     }
 }
