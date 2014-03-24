@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="8cbc6f89-8546-4b2a-b853-3d9a653656b3" name="add_new_penalty" linkedPackageId="e1fc06e9-f522-4682-8d48-e2faafef57ef" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="45361861-8995-489f-9967-45323f710ed9">
+      <profileInstance Id="f955da0a-a52e-4419-9c43-841c6b8f5abd" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8f3c270a-44dd-407e-b295-bfd70cfb287d">
+      <profileInstance Id="50fda0a7-e8be-4be5-a50e-750a0297eed9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="141766c8-3ca7-4ec1-9631-bee1296b1ac9" name="Library worker" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="86d5600b-7e4f-4d44-a87a-2f67d560321d" />
+        <suppliersInternal>
+          <dependency Id="f3366ebe-571d-49f6-97ee-9c4120b1931e">
+            <useCaseMoniker Id="6dd13edd-08b8-4e39-a97e-a66aebd10304" LastKnownName="CreateNewPenalty" />
+            <elementDefinition Id="d8c27759-55c7-4d95-9e23-d02eb0b1cbd5" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6dd13edd-08b8-4e39-a97e-a66aebd10304" name="CreateNewPenalty" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="10b6830e-ac82-42db-a6e2-a2365d1dd3dc" />
+        <additions>
+          <include Id="8b29b764-1768-40bb-aa82-d086e22c5974">
+            <useCaseMoniker Id="4f927a72-4a27-42ba-81e7-2f0dbe159d6a" LastKnownName="SelectPenaltyType" />
+            <elementDefinition Id="77989e6a-5881-4872-b07a-c8ac7473f51e" />
+          </include>
+          <include Id="c65e5543-1a3b-4991-b668-95625b579e72">
+            <useCaseMoniker Id="69657e1f-29de-49c3-92c9-f94f94ab9646" LastKnownName="AssignToReader" />
+            <elementDefinition Id="208ea74d-da7c-4bce-96e6-5cf4e4983ea4" />
+          </include>
+          <include Id="fa33451c-af25-4450-8363-9faefb5cc70f">
+            <useCaseMoniker Id="e06b4a7d-abba-4f7b-b642-97131cb01bcf" LastKnownName="CreateNewPenaltyItem" />
+            <elementDefinition Id="715b50be-93fa-40bf-b39c-b11b5aa667e1" />
+          </include>
+          <include Id="d385f5c9-b1e3-4210-86a1-c43843fd6b90">
+            <useCaseMoniker Id="1b13cbba-1d05-42e0-b3f7-084037c7bb97" LastKnownName="SetExpirationDate" />
+            <elementDefinition Id="032adeb7-740a-448a-b222-1b59ad3f5132" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4f927a72-4a27-42ba-81e7-2f0dbe159d6a" name="SelectPenaltyType" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7b942641-46b8-4e75-a674-26b1ce9ef1d6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1b13cbba-1d05-42e0-b3f7-084037c7bb97" name="SetExpirationDate" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5b644ffe-5d44-4b09-808a-82c83e74c14f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="69657e1f-29de-49c3-92c9-f94f94ab9646" name="AssignToReader" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9ac0a823-5527-4b45-baf0-220b47ed3aa2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e06b4a7d-abba-4f7b-b642-97131cb01bcf" name="CreateNewPenaltyItem" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="399f05b4-659a-429c-be56-896a73e46f40" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d1be9fa9-17ad-4422-8440-05a695510fa5" name="AddComment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="28d88530-6ee1-44aa-8a46-e4870583f75c" />
+        <extendedCases>
+          <extend Id="cf49ab7c-05ff-491a-bca7-bc4b0bac99d0">
+            <useCaseMoniker Id="6dd13edd-08b8-4e39-a97e-a66aebd10304" LastKnownName="CreateNewPenalty" />
+            <elementDefinition Id="c62bbbec-4ee8-4fb8-a367-2bbd9fae95bc" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="e1fc06e9-f522-4682-8d48-e2faafef57ef" name="library_modeling">
+    <elementDefinition Id="3d0f8a18-be1e-44bb-9429-5168ba9ab6c4" />
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="dfe44fc5-0aa6-431f-8906-a5857c82eca8" name="finding_book_in_librarry" linkedPackageId="ae2ef2b9-3034-4870-a8fd-d335984cbc47" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="af7024e5-6d23-49f6-a12c-bc5662eba292">
+      <profileInstance Id="09986a1c-9d73-4a37-8dde-3f81bba27e6b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e6f31613-cb98-40a3-b584-20e3f0ea5fe2">
+      <profileInstance Id="25fb20e0-3cfc-4e9d-ab75-03bcd0e5378b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="a1707d80-f514-4cc7-b6c0-1716791bfe6f" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="93886125-6ca5-43ac-946b-962f16ebbf40" />
+        <suppliersInternal>
+          <dependency Id="59c34dda-6a75-4b0b-91f3-5845a635bb82">
+            <useCaseMoniker Id="d20728a7-45fe-4f10-8d43-3197cabaf5de" LastKnownName="Look up for books availability" />
+            <elementDefinition Id="b505dcc6-ed95-4fba-b4ba-a5ed079d7e4f" />
+          </dependency>
+          <dependency Id="729e9175-cb7c-4ac0-aca0-25c353ec6e1b">
+            <useCaseMoniker Id="b158cb9b-53e6-46d2-9154-48f3c558ee20" LastKnownName="Authoriation" />
+            <elementDefinition Id="f965825f-9e00-4fc6-888b-b580371ad36c" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d20728a7-45fe-4f10-8d43-3197cabaf5de" name="Look up for books availability" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f93de216-8be6-40bb-9df7-d4569817d03f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b158cb9b-53e6-46d2-9154-48f3c558ee20" name="Authoriation" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0def013f-a133-48bb-87ca-96233a2d7793" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8da509ce-9e0e-4aa7-ad7e-9e52a73c7d79" name="Find Books" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="437feb42-88d2-44ba-887b-e1a05afc5e22" />
+        <extendedCases>
+          <extend Id="0a23c800-2cd4-4cf5-be5a-48a578dcabe6">
+            <useCaseMoniker Id="b158cb9b-53e6-46d2-9154-48f3c558ee20" LastKnownName="Authoriation" />
+            <elementDefinition Id="bdbae488-5d86-4c37-acb7-a8d0d54512b9" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5f6a0ee2-78f6-4842-b9dd-a21db85a191d" name="Search by Title" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8286edac-b444-47e4-9caa-0f6ae14ebe18" />
+        <extendedCases>
+          <extend Id="d5c85845-accc-42fc-b300-c688a2b8068e">
+            <useCaseMoniker Id="8da509ce-9e0e-4aa7-ad7e-9e52a73c7d79" LastKnownName="Find Books" />
+            <elementDefinition Id="6e6f3678-3f0b-4bfe-adb0-740f3db4a70e" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="35a9a628-7e3d-410f-b8e0-7331a3461704" name="Search By Author Name" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="75773bad-5ca5-427d-8007-ce8fff9d7522" />
+        <extendedCases>
+          <extend Id="4b3a9c5a-be1e-4831-9aec-3602b07e8b87">
+            <useCaseMoniker Id="8da509ce-9e0e-4aa7-ad7e-9e52a73c7d79" LastKnownName="Find Books" />
+            <elementDefinition Id="d91dfdac-df5e-45e2-a69c-fb90c6860e7a" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a7a7472a-e1c1-4e7f-bec3-27998ebb4fa5" name="Search By Pub Year" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7e69b727-689c-4e75-8ccf-0f2c33108319" />
+        <extendedCases>
+          <extend Id="ed27d649-33f6-4ebf-9337-5da0c9dcc170">
+            <useCaseMoniker Id="8da509ce-9e0e-4aa7-ad7e-9e52a73c7d79" LastKnownName="Find Books" />
+            <elementDefinition Id="91a84a13-054c-4fcf-91f4-da88be0ba2c9" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b33cc4a4-a9ea-4fe1-8864-416229c29849" name="Search by ISBN" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9d68c30a-1695-4077-84f3-b57a8ca0d315" />
+        <extendedCases>
+          <extend Id="713a1b0f-e3ec-4193-9947-27e0ad948364">
+            <useCaseMoniker Id="8da509ce-9e0e-4aa7-ad7e-9e52a73c7d79" LastKnownName="Find Books" />
+            <elementDefinition Id="18779940-4b1f-4885-9d95-0a4734a43e61" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ac4ff16f-04cd-4eff-b430-9b200ba894fa" name="Combined Search" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="db9b7c26-4c9c-4660-8609-c717c8aea1b1" />
+        <extendedCases>
+          <extend Id="58ccb82c-75dc-4849-b2e7-b845a055a4da">
+            <useCaseMoniker Id="8da509ce-9e0e-4aa7-ad7e-9e52a73c7d79" LastKnownName="Find Books" />
+            <elementDefinition Id="dc1d0855-816f-4c57-9249-2e4e0690d481" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="ae2ef2b9-3034-4870-a8fd-d335984cbc47" name="library_modeling">
+    <elementDefinition Id="3d0f8a18-be1e-44bb-9429-5168ba9ab6c4" />
+  </package>
+</useCaseModelRoot>

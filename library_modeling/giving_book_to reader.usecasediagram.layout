@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GiveBookToReader">
+  <useCaseModelRootMoniker Id="31226eda-bd8c-49bc-8256-856867c5533f" />
+  <nestedChildShapes>
+    <actorShape Id="abd4c480-fcef-4008-b231-06730d1d9d29" absoluteBounds="2.5, 3.125, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="47864938-2235-444d-9cd1-d7e50ffaf00d" LastKnownName="Reader" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="6a614858-66f1-4ca8-b283-06073db13779" absoluteBounds="5.75, 4.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="0ed5fbe1-8735-406f-a9ef-a4aea6f6e9ad" LastKnownName="Give Book to Reader" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <actorShape Id="664deee4-4c2e-45e1-8481-838367c08532" absoluteBounds="3, 4.75, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="03976f78-8e8f-45df-814f-31fe6bcb5854" LastKnownName="Worker" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseDependencyConnector edgePoints="[(3.5 : 4.94791666666667); (5.78846153846154 : 4.47115384615385)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="1cbcfb10-d45f-4c23-a278-75e6eb62695a" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="664deee4-4c2e-45e1-8481-838367c08532" />
+        <useCaseShapeMoniker Id="6a614858-66f1-4ca8-b283-06073db13779" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="fc971a7d-e1ec-43d8-9e7c-ea6d89e2cbad" absoluteBounds="4.25, 3.375, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="815bc39a-9d29-45b3-97e4-06fd9ce846ff" LastKnownName="Autorize as admin" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(5.89644660940673 : 4.19822330470336); (5.10355339059327 : 3.80177669529664)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="8c50134b-8ae3-4a0a-968a-9c7e8f13e789" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="6a614858-66f1-4ca8-b283-06073db13779" />
+        <useCaseShapeMoniker Id="fc971a7d-e1ec-43d8-9e7c-ea6d89e2cbad" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="e7b5018b-dbf3-4266-8989-eb393dc7b1cd" absoluteBounds="7.375, 3.625, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="a980b5eb-2d2e-43cb-9725-e466060ba4c6" LastKnownName="Find user profile" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(6.67582915835227 : 4.24397564358392); (7.44917084164773 : 4.00602435641608)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="ae8990af-8b8c-4014-bef8-59286e9f0ae0" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="6a614858-66f1-4ca8-b283-06073db13779" />
+        <useCaseShapeMoniker Id="e7b5018b-dbf3-4266-8989-eb393dc7b1cd" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="c359d093-771e-4e5e-a87f-7de84a2c4368" absoluteBounds="6, 2.125, 1, 0.875" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="574d43e2-9f50-44a3-b51a-8dc2ecf44217" LastKnownName="Find books" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(6.83786231425867 : 2.88500493633782); (7.64299650266472 : 3.65354211617996)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="18bd5298-d469-4ef7-a1e3-d6d8c54c6e31" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="c359d093-771e-4e5e-a87f-7de84a2c4368" />
+        <useCaseShapeMoniker Id="e7b5018b-dbf3-4266-8989-eb393dc7b1cd" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="938308fb-f022-4043-aed6-9da33eb52539" absoluteBounds="8.5, 2.375, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="c6807d7b-29ba-42ce-a356-e527f344b5b2" LastKnownName="Watch recommendation" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(8.7 : 3.05); (8.09860679774998 : 3.65139320225002)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="fc307075-dbea-4ea5-a6ef-c2ae364b73df" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="938308fb-f022-4043-aed6-9da33eb52539" />
+        <useCaseShapeMoniker Id="e7b5018b-dbf3-4266-8989-eb393dc7b1cd" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="6d7803e7-a790-4448-b153-9944acfd1dda" absoluteBounds="7.375, 0.875, 1, 0.875" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="a76222c6-af38-41f3-9b83-41d9946eca16" LastKnownName="Add book to user profile and give it to him" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(7.52826570182062 : 1.62771299834489); (6.84673429817938 : 2.24728700165511)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="d98935cc-46e9-4889-879a-d11290dec079" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="6d7803e7-a790-4448-b153-9944acfd1dda" />
+        <useCaseShapeMoniker Id="c359d093-771e-4e5e-a87f-7de84a2c4368" />
+      </nodes>
+    </extendConnector>
+    <extendConnector edgePoints="[(8.15750268962489 : 1.67347565896514); (8.74689971561789 : 2.4265940810673)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="bbc301de-0533-4f0d-980f-b08514d806df" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="6d7803e7-a790-4448-b153-9944acfd1dda" />
+        <useCaseShapeMoniker Id="938308fb-f022-4043-aed6-9da33eb52539" />
+      </nodes>
+    </extendConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

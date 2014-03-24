@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="3b00d07c-a64e-4dc2-8818-8123826dd54b" name="adding_new_book_to_the_library" linkedPackageId="241d8a45-2e84-4e80-81c4-0e496b90fae3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="b30ba795-8ae1-4399-8945-6dd1f91452dc">
+      <elementDefinition Id="ed4d41be-c895-4fd8-8e49-2da3065395ab" />
+      <body>Create new item in books_isnb table</body>
+      <annotatedElements>
+        <useCaseMoniker Id="889e1f05-729c-4475-bbc4-ce8695d1cde7" LastKnownName="CreateNewBook" />
+      </annotatedElements>
+    </comment>
+    <comment Id="a0c62b13-afb3-48b7-bbf6-4ef2ebc04642">
+      <elementDefinition Id="fe992c29-a2c8-4853-80a6-a68cd27bd420" />
+      <body>Create new item in books table</body>
+      <annotatedElements>
+        <useCaseMoniker Id="53d23b3c-d1db-4848-a9d4-433d5f3b2204" LastKnownName="AddNewBookItem" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="bb0c3590-b108-4e2c-a409-d02c177192da">
+      <profileInstance Id="4ff018bc-33de-4d02-9f6e-237d1625c49e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="fd82038a-b7bb-47c5-ac73-2fbc1a25ede3">
+      <profileInstance Id="04e117be-a42f-475d-b6e1-799c38c8c8cf" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="8453baf6-8938-4f9b-a372-cb802de17643" name="Library worker" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="006dab34-ab32-43ac-a966-e928c999102b" />
+        <suppliersInternal>
+          <dependency Id="d8933056-7d62-4664-9c09-7005767b6f21">
+            <useCaseMoniker Id="326ca276-cb02-42fe-b9a3-08b4edd2b69e" LastKnownName="AddNewBook" />
+            <elementDefinition Id="3aa7a854-ad32-4398-a5eb-886d6199f844" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="326ca276-cb02-42fe-b9a3-08b4edd2b69e" name="AddNewBook" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1ee05546-2af4-48f3-a918-bcbc8f75b25c" />
+        <additions>
+          <include Id="12393d7c-e405-443e-a787-2312bb9326d2">
+            <useCaseMoniker Id="7a8c87dd-330e-4bae-9fe2-59ebb8fc1235" LastKnownName="AddNewPublisher" />
+            <elementDefinition Id="d4f47d17-5af5-493d-a758-b93df5385d57" />
+          </include>
+          <include Id="c93ef05d-bd11-49e0-b157-9a2afde0b880">
+            <useCaseMoniker Id="fd4d8a5e-6fc8-45cb-af7e-fccaf9cef9e6" LastKnownName="AddNewAuthor" />
+            <elementDefinition Id="62825e8f-14ee-4e7b-9943-d54df849e5e7" />
+          </include>
+          <include Id="2eb0a658-882a-49e3-af3e-ec41b85ad528">
+            <useCaseMoniker Id="deb0e4de-af91-4c58-abcd-dc4223bf4775" LastKnownName="SetBookLocation" />
+            <elementDefinition Id="7e6c729d-aa32-4130-bf73-3fe1dc300360" />
+          </include>
+          <include Id="c8d3a1cc-b1bd-4845-a38b-cf1a35ae9de1">
+            <useCaseMoniker Id="95932b6d-bb27-4596-a720-c00c64cb77da" LastKnownName="Check  input data" />
+            <elementDefinition Id="c6af8fba-9959-4e72-94bf-1bf8fe3f8215" />
+          </include>
+          <include Id="9b2e8c1b-794b-4ee4-aba3-dabc51acb486">
+            <useCaseMoniker Id="53d23b3c-d1db-4848-a9d4-433d5f3b2204" LastKnownName="AddNewBookItem" />
+            <elementDefinition Id="6a2c0907-cfc5-47df-8f9c-5fa4718e2eb2" />
+          </include>
+          <include Id="4b1e9ebb-b500-47b7-9c20-7099b0ddfcc7">
+            <useCaseMoniker Id="889e1f05-729c-4475-bbc4-ce8695d1cde7" LastKnownName="CreateNewBook" />
+            <elementDefinition Id="55078123-a2b9-4203-beb2-ff78d31610fb" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7a8c87dd-330e-4bae-9fe2-59ebb8fc1235" name="AddNewPublisher" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="311ded0c-b684-4940-a148-f4b94fd5203a" />
+        <additions>
+          <include Id="25ce9fdf-f36f-4cf4-8cfd-b17f957285dd">
+            <useCaseMoniker Id="cc6c19fa-5026-41ed-b649-7e4d5b703681" LastKnownName="Check if publisher exists" />
+            <elementDefinition Id="bdf13932-1246-454f-af33-646fe51a0594" />
+          </include>
+          <include Id="515e13bb-9c3b-4adb-bc9b-29e61d1b5d04">
+            <useCaseMoniker Id="95932b6d-bb27-4596-a720-c00c64cb77da" LastKnownName="Check  input data" />
+            <elementDefinition Id="95d84393-5031-4333-8c44-f006e7eaa786" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1b5198fc-1545-4e62-a035-3886746de14a" name="Check if  book exists" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5ed0e064-4b2d-45cb-8199-b5b502992be3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="cc6c19fa-5026-41ed-b649-7e4d5b703681" name="Check if publisher exists" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6a5859ed-711a-423b-9d63-a4b5ede83b9c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fd4d8a5e-6fc8-45cb-af7e-fccaf9cef9e6" name="AddNewAuthor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7f4c00b3-0810-40c1-9e3a-72fc0f616265" />
+        <additions>
+          <include Id="fa570245-3cb7-48bc-a4ea-df7bf31a6466">
+            <useCaseMoniker Id="511ae731-c1b4-4285-9229-646f01ffb7d4" LastKnownName="Check if author exists" />
+            <elementDefinition Id="ed2cd7d4-0254-4c32-81fc-b44d9a64a241" />
+          </include>
+          <include Id="0949ffde-5fd6-4c0c-92ec-788124bfb9a3">
+            <useCaseMoniker Id="95932b6d-bb27-4596-a720-c00c64cb77da" LastKnownName="Check  input data" />
+            <elementDefinition Id="3a4f7ee4-582e-4bfd-9bcc-70a933be83b3" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="511ae731-c1b4-4285-9229-646f01ffb7d4" name="Check if author exists" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d096de51-f7de-4ea1-83a0-685b83a87f6a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="deb0e4de-af91-4c58-abcd-dc4223bf4775" name="SetBookLocation" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d86380e6-4b47-4697-8619-f001f6fac7e3" />
+        <additions>
+          <include Id="f49e620f-42ed-48c6-9fb5-c02e3a481e5e">
+            <useCaseMoniker Id="c39527d3-3d5b-4922-902a-b3fa93ee0b5f" LastKnownName="CheckLocation" />
+            <elementDefinition Id="c095407c-e204-43cb-a2c6-6edb7d92d1cf" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c39527d3-3d5b-4922-902a-b3fa93ee0b5f" name="CheckLocation" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5d0531f8-368c-45a5-8e93-af912db95e38" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="95932b6d-bb27-4596-a720-c00c64cb77da" name="Check  input data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="92f4112c-94ba-4d83-8036-726f68d3a2cf" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="889e1f05-729c-4475-bbc4-ce8695d1cde7" name="CreateNewBook" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="662faffe-0bcd-44c9-9cac-f32fd7ddf906" />
+        <additions>
+          <include Id="90a8ea2b-7506-42d1-85ca-591a959d016b">
+            <useCaseMoniker Id="1b5198fc-1545-4e62-a035-3886746de14a" LastKnownName="Check if  book exists" />
+            <elementDefinition Id="9c4c4406-1a5e-4750-acb5-8f8578e61de1" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="53d23b3c-d1db-4848-a9d4-433d5f3b2204" name="AddNewBookItem" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8d2e98f0-c904-422f-9d9c-a0e0cc39708f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="241d8a45-2e84-4e80-81c4-0e496b90fae3" name="library_modeling">
+    <elementDefinition Id="3d0f8a18-be1e-44bb-9429-5168ba9ab6c4" />
+  </package>
+</useCaseModelRoot>

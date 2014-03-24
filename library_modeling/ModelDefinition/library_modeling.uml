@@ -1,0 +1,922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="3d0f8a18-be1e-44bb-9429-5168ba9ab6c4"
+  name="library_modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="ed4d41be-c895-4fd8-8e49-2da3065395ab">
+      <body>Create new item in books_isnb table</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="662faffe-0bcd-44c9-9cac-f32fd7ddf906"
+          LastKnownName="CreateNewBook"
+          LastKnownLocation="library_modeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="fe992c29-a2c8-4853-80a6-a68cd27bd420">
+      <body>Create new item in books table</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="8d2e98f0-c904-422f-9d9c-a0e0cc39708f"
+          LastKnownName="AddNewBookItem"
+          LastKnownLocation="library_modeling.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <useCase
+        Id="15491ca3-398d-4a9e-9967-85c285ec7f32"
+        name="Register new reader"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="1427fa89-467c-4807-8ff9-0a0bfe02f72a">
+            <useCaseMoniker
+              Id="179f37e3-2e2a-460a-937c-26673a6e3f30"
+              LastKnownName="Check if reader exists"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="334d6e83-b9b3-4b89-810b-5ac15d48d80e">
+            <useCaseMoniker
+              Id="a88fa5ee-1bb0-4de7-9623-f6af44eb0211"
+              LastKnownName="Check input data"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="496b2586-81db-4083-b1f3-0f7f49e2931c">
+            <useCaseMoniker
+              Id="05738c74-5fd6-4682-95d7-e3cea9880b23"
+              LastKnownName="Create new reader"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="0b0e315b-5f04-4e1a-9d6f-92203982e7b1"
+        name="Library worker"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="a7a12241-3d32-47da-b5a1-428469c6fb4f">
+            <useCaseMoniker
+              Id="15491ca3-398d-4a9e-9967-85c285ec7f32"
+              LastKnownName="Register new reader"
+              LastKnownLocation="library_modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="179f37e3-2e2a-460a-937c-26673a6e3f30"
+        name="Check if reader exists"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a88fa5ee-1bb0-4de7-9623-f6af44eb0211"
+        name="Check input data"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="29b5ef21-40e6-4a23-814e-c4feb08fdb97">
+            <useCaseMoniker
+              Id="3800a3e2-8283-4c05-80d3-e38d0198d72d"
+              LastKnownName="Check valid name"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="495ef77d-a76e-4388-9b29-d6b5911247ab">
+            <useCaseMoniker
+              Id="7d96eed2-48ae-419e-a2dc-b8c2277bc0e7"
+              LastKnownName="Check phone"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="c65c1404-ac8c-41c1-b2f2-1d1a539f75fc">
+            <useCaseMoniker
+              Id="9f4bb700-bb52-49d2-aedb-e076bfbea6b6"
+              LastKnownName="Check address"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3800a3e2-8283-4c05-80d3-e38d0198d72d"
+        name="Check valid name"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4425be5d-fced-4e5a-a647-001b783f49e2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9f4bb700-bb52-49d2-aedb-e076bfbea6b6"
+        name="Check address"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cd924e78-6453-4217-ac0e-4e425c314bca"
+        name="Check phone1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7d96eed2-48ae-419e-a2dc-b8c2277bc0e7"
+        name="Check phone"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="05738c74-5fd6-4682-95d7-e3cea9880b23"
+        name="Create new reader"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e50c981a-fabd-4a9d-b20c-41fe237900e0"
+        name="add new book"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="006dab34-ab32-43ac-a966-e928c999102b"
+        name="Library worker"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="6d92ecc5-87bc-4fef-bdf9-f149eb2c9d40">
+            <useCaseMoniker
+              Id="e50c981a-fabd-4a9d-b20c-41fe237900e0"
+              LastKnownName="add new book"
+              LastKnownLocation="library_modeling.uml" />
+          </dependency>
+          <dependency
+            Id="3aa7a854-ad32-4398-a5eb-886d6199f844">
+            <useCaseMoniker
+              Id="1ee05546-2af4-48f3-a918-bcbc8f75b25c"
+              LastKnownName="AddNewBook"
+              LastKnownLocation="library_modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6726c504-4137-471e-a6d6-15bf05787ba7"
+        name="Check if reader exists1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="87395d4b-f934-4525-967c-74edd9cce0d7">
+            <useCaseMoniker
+              Id="e50c981a-fabd-4a9d-b20c-41fe237900e0"
+              LastKnownName="add new book"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3218f3fb-3c82-4053-9b26-adde8bd0606e"
+        name="Check input data1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6e30ab97-e3d0-4133-9bee-8f55809cbc3d">
+            <useCaseMoniker
+              Id="e50c981a-fabd-4a9d-b20c-41fe237900e0"
+              LastKnownName="add new book"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="df9a875c-c6b3-4d2e-9da0-d68346f0c074"
+        name="Check valid name1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4e63c585-8390-4deb-a522-8fe85b715e84">
+            <useCaseMoniker
+              Id="3218f3fb-3c82-4053-9b26-adde8bd0606e"
+              LastKnownName="Check input data1"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4aed7166-d5b4-4f54-aeea-0d17e9a027b3"
+        name="Check address1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="3a2659d8-c769-462a-abed-445bb487f5c5">
+            <useCaseMoniker
+              Id="3218f3fb-3c82-4053-9b26-adde8bd0606e"
+              LastKnownName="Check input data1"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="22c6597e-aec3-451e-9c4c-117c16685311"
+        name="Check phone2"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9dc490eb-b332-41dd-b406-967c8bfcb0d1">
+            <useCaseMoniker
+              Id="3218f3fb-3c82-4053-9b26-adde8bd0606e"
+              LastKnownName="Check input data1"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c806b8a3-3353-4cda-b2da-3d50b6a738eb"
+        name="Create new reader1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="98e8867a-0bdb-4c92-b959-4830a8f1af37">
+            <useCaseMoniker
+              Id="e50c981a-fabd-4a9d-b20c-41fe237900e0"
+              LastKnownName="add new book"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d261b72e-3cb7-4c43-8c1a-fbbbc3db01ad"
+        name="Add new  book"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1ee05546-2af4-48f3-a918-bcbc8f75b25c"
+        name="AddNewBook"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="d4f47d17-5af5-493d-a758-b93df5385d57">
+            <useCaseMoniker
+              Id="311ded0c-b684-4940-a148-f4b94fd5203a"
+              LastKnownName="AddNewPublisher"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="62825e8f-14ee-4e7b-9943-d54df849e5e7">
+            <useCaseMoniker
+              Id="7f4c00b3-0810-40c1-9e3a-72fc0f616265"
+              LastKnownName="AddNewAuthor"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="7e6c729d-aa32-4130-bf73-3fe1dc300360">
+            <useCaseMoniker
+              Id="d86380e6-4b47-4697-8619-f001f6fac7e3"
+              LastKnownName="SetBookLocation"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="c6af8fba-9959-4e72-94bf-1bf8fe3f8215">
+            <useCaseMoniker
+              Id="92f4112c-94ba-4d83-8036-726f68d3a2cf"
+              LastKnownName="Check  input data"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="6a2c0907-cfc5-47df-8f9c-5fa4718e2eb2">
+            <useCaseMoniker
+              Id="8d2e98f0-c904-422f-9d9c-a0e0cc39708f"
+              LastKnownName="AddNewBookItem"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="55078123-a2b9-4203-beb2-ff78d31610fb">
+            <useCaseMoniker
+              Id="662faffe-0bcd-44c9-9cac-f32fd7ddf906"
+              LastKnownName="CreateNewBook"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="311ded0c-b684-4940-a148-f4b94fd5203a"
+        name="AddNewPublisher"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="bdf13932-1246-454f-af33-646fe51a0594">
+            <useCaseMoniker
+              Id="6a5859ed-711a-423b-9d63-a4b5ede83b9c"
+              LastKnownName="Check if publisher exists"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="95d84393-5031-4333-8c44-f006e7eaa786">
+            <useCaseMoniker
+              Id="92f4112c-94ba-4d83-8036-726f68d3a2cf"
+              LastKnownName="Check  input data"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5ed0e064-4b2d-45cb-8199-b5b502992be3"
+        name="Check if  book exists"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6a5859ed-711a-423b-9d63-a4b5ede83b9c"
+        name="Check if publisher exists"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7f4c00b3-0810-40c1-9e3a-72fc0f616265"
+        name="AddNewAuthor"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ed2cd7d4-0254-4c32-81fc-b44d9a64a241">
+            <useCaseMoniker
+              Id="d096de51-f7de-4ea1-83a0-685b83a87f6a"
+              LastKnownName="Check if author exists"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="3a4f7ee4-582e-4bfd-9bcc-70a933be83b3">
+            <useCaseMoniker
+              Id="92f4112c-94ba-4d83-8036-726f68d3a2cf"
+              LastKnownName="Check  input data"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d096de51-f7de-4ea1-83a0-685b83a87f6a"
+        name="Check if author exists"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="839c3a1b-f2fa-486b-bf98-9ad0c9c941d5"
+        name="Check if  publisher exists"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d86380e6-4b47-4697-8619-f001f6fac7e3"
+        name="SetBookLocation"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="c095407c-e204-43cb-a2c6-6edb7d92d1cf">
+            <useCaseMoniker
+              Id="5d0531f8-368c-45a5-8e93-af912db95e38"
+              LastKnownName="CheckLocation"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5d0531f8-368c-45a5-8e93-af912db95e38"
+        name="CheckLocation"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="92f4112c-94ba-4d83-8036-726f68d3a2cf"
+        name="Check  input data"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="662faffe-0bcd-44c9-9cac-f32fd7ddf906"
+        name="CreateNewBook"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9c4c4406-1a5e-4750-acb5-8f8578e61de1">
+            <useCaseMoniker
+              Id="5ed0e064-4b2d-45cb-8199-b5b502992be3"
+              LastKnownName="Check if  book exists"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8d2e98f0-c904-422f-9d9c-a0e0cc39708f"
+        name="AddNewBookItem"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="4387c433-5a4f-4a81-a14a-85e53f0c73b9"
+        name="Library worker"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="2a6b683a-e29f-4aef-92a9-05bc1dd45059">
+            <useCaseMoniker
+              Id="7c408666-b7be-47ff-8002-95bb2ad60ee7"
+              LastKnownName="BookSearch"
+              LastKnownLocation="library_modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7c408666-b7be-47ff-8002-95bb2ad60ee7"
+        name="BookSearch"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="23ebb3f4-01f6-4967-8196-cd831159255d"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="86d5600b-7e4f-4d44-a87a-2f67d560321d"
+        name="Library worker"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="d8c27759-55c7-4d95-9e23-d02eb0b1cbd5">
+            <useCaseMoniker
+              Id="10b6830e-ac82-42db-a6e2-a2365d1dd3dc"
+              LastKnownName="CreateNewPenalty"
+              LastKnownLocation="library_modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="10b6830e-ac82-42db-a6e2-a2365d1dd3dc"
+        name="CreateNewPenalty"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="77989e6a-5881-4872-b07a-c8ac7473f51e">
+            <useCaseMoniker
+              Id="7b942641-46b8-4e75-a674-26b1ce9ef1d6"
+              LastKnownName="SelectPenaltyType"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="208ea74d-da7c-4bce-96e6-5cf4e4983ea4">
+            <useCaseMoniker
+              Id="9ac0a823-5527-4b45-baf0-220b47ed3aa2"
+              LastKnownName="AssignToReader"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="715b50be-93fa-40bf-b39c-b11b5aa667e1">
+            <useCaseMoniker
+              Id="399f05b4-659a-429c-be56-896a73e46f40"
+              LastKnownName="CreateNewPenaltyItem"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="032adeb7-740a-448a-b222-1b59ad3f5132">
+            <useCaseMoniker
+              Id="5b644ffe-5d44-4b09-808a-82c83e74c14f"
+              LastKnownName="SetExpirationDate"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7b942641-46b8-4e75-a674-26b1ce9ef1d6"
+        name="SelectPenaltyType"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5b644ffe-5d44-4b09-808a-82c83e74c14f"
+        name="SetExpirationDate"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9ac0a823-5527-4b45-baf0-220b47ed3aa2"
+        name="AssignToReader"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="399f05b4-659a-429c-be56-896a73e46f40"
+        name="CreateNewPenaltyItem"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="28d88530-6ee1-44aa-8a46-e4870583f75c"
+        name="AddComment"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c62bbbec-4ee8-4fb8-a367-2bbd9fae95bc">
+            <useCaseMoniker
+              Id="10b6830e-ac82-42db-a6e2-a2365d1dd3dc"
+              LastKnownName="CreateNewPenalty"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="0eef351c-ed82-4fe4-8336-ce8aacc450aa"
+        name="Reader"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="93b15787-eece-4a72-85c8-126e4cb58c8b"
+        name="Give Book to Reader"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9e9632f8-cac3-4cfd-a4d6-c5f2df5e8451">
+            <useCaseMoniker
+              Id="f34cff3d-50c8-41a6-954c-bf2d6bf7a523"
+              LastKnownName="Autorize as admin"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+          <include
+            Id="4a2e9f6a-9680-48c2-83c7-9e973a009f57">
+            <useCaseMoniker
+              Id="fd2573cd-0b01-483f-a9dc-ca064ba00ed5"
+              LastKnownName="Find user profile"
+              LastKnownLocation="library_modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="c6456430-a1f1-4916-9515-d25c9385b0f9"
+        name="Worker"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="d55115a8-2271-45f0-9195-65aab52f754b">
+            <useCaseMoniker
+              Id="93b15787-eece-4a72-85c8-126e4cb58c8b"
+              LastKnownName="Give Book to Reader"
+              LastKnownLocation="library_modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f34cff3d-50c8-41a6-954c-bf2d6bf7a523"
+        name="Autorize as admin"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f2e95d4e-ebd1-4d79-a384-6749f00f261d"
+        name="Find Book"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="04dcf2ce-5243-4aaf-abe9-09d5c483b757">
+            <useCaseMoniker
+              Id="93b15787-eece-4a72-85c8-126e4cb58c8b"
+              LastKnownName="Give Book to Reader"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fd2573cd-0b01-483f-a9dc-ca064ba00ed5"
+        name="Find user profile"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7fc2254a-c6d4-4ac8-8b6e-b16fae844f67"
+        name="Find books"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="38c18439-9689-4fd1-8389-d8fd3b8e15be">
+            <useCaseMoniker
+              Id="fd2573cd-0b01-483f-a9dc-ca064ba00ed5"
+              LastKnownName="Find user profile"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c2d1bee3-8c80-40a2-86ab-cf74e14facea"
+        name="Watch recommendation"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="a729973d-7106-49d8-907f-5ca26e6ddc9f">
+            <useCaseMoniker
+              Id="fd2573cd-0b01-483f-a9dc-ca064ba00ed5"
+              LastKnownName="Find user profile"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="96d481db-fd41-496e-9c7e-2f19dfdf9d5e"
+        name="Add book to user profile and give it to him"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="f46ab9b7-0306-45ab-a311-4e665000d0ce">
+            <useCaseMoniker
+              Id="7fc2254a-c6d4-4ac8-8b6e-b16fae844f67"
+              LastKnownName="Find books"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+          <extend
+            Id="a224ef4c-6711-4ccc-9a93-6c3bb347775a">
+            <useCaseMoniker
+              Id="c2d1bee3-8c80-40a2-86ab-cf74e14facea"
+              LastKnownName="Watch recommendation"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="93886125-6ca5-43ac-946b-962f16ebbf40"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="b505dcc6-ed95-4fba-b4ba-a5ed079d7e4f">
+            <useCaseMoniker
+              Id="f93de216-8be6-40bb-9df7-d4569817d03f"
+              LastKnownName="Look up for books availability"
+              LastKnownLocation="library_modeling.uml" />
+          </dependency>
+          <dependency
+            Id="f965825f-9e00-4fc6-888b-b580371ad36c">
+            <useCaseMoniker
+              Id="0def013f-a133-48bb-87ca-96233a2d7793"
+              LastKnownName="Authoriation"
+              LastKnownLocation="library_modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f93de216-8be6-40bb-9df7-d4569817d03f"
+        name="Look up for books availability"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0def013f-a133-48bb-87ca-96233a2d7793"
+        name="Authoriation"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="437feb42-88d2-44ba-887b-e1a05afc5e22"
+        name="Find Books"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="bdbae488-5d86-4c37-acb7-a8d0d54512b9">
+            <useCaseMoniker
+              Id="0def013f-a133-48bb-87ca-96233a2d7793"
+              LastKnownName="Authoriation"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8286edac-b444-47e4-9caa-0f6ae14ebe18"
+        name="Search by Title"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="6e6f3678-3f0b-4bfe-adb0-740f3db4a70e">
+            <useCaseMoniker
+              Id="437feb42-88d2-44ba-887b-e1a05afc5e22"
+              LastKnownName="Find Books"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="75773bad-5ca5-427d-8007-ce8fff9d7522"
+        name="Search By Author Name"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="d91dfdac-df5e-45e2-a69c-fb90c6860e7a">
+            <useCaseMoniker
+              Id="437feb42-88d2-44ba-887b-e1a05afc5e22"
+              LastKnownName="Find Books"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7e69b727-689c-4e75-8ccf-0f2c33108319"
+        name="Search By Pub Year"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="91a84a13-054c-4fcf-91f4-da88be0ba2c9">
+            <useCaseMoniker
+              Id="437feb42-88d2-44ba-887b-e1a05afc5e22"
+              LastKnownName="Find Books"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9d68c30a-1695-4077-84f3-b57a8ca0d315"
+        name="Search by ISBN"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="18779940-4b1f-4885-9d95-0a4734a43e61">
+            <useCaseMoniker
+              Id="437feb42-88d2-44ba-887b-e1a05afc5e22"
+              LastKnownName="Find Books"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="db9b7c26-4c9c-4660-8609-c717c8aea1b1"
+        name="Combined Search"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="dc1d0855-816f-4c57-9249-2e4e0690d481">
+            <useCaseMoniker
+              Id="437feb42-88d2-44ba-887b-e1a05afc5e22"
+              LastKnownName="Find Books"
+              LastKnownLocation="library_modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

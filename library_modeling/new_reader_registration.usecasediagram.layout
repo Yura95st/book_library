@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="new_reader_registration">
+  <useCaseModelRootMoniker Id="01e92b7b-2e59-401e-83ba-2f4a411247b5" />
+  <nestedChildShapes>
+    <useCaseShape Id="edaaa0a8-7604-49dc-9fac-95da9936c76f" absoluteBounds="4, 4.625, 1.5, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="d5dde8f1-7680-4a11-aed6-99eb9a10be96" LastKnownName="Register new reader" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <actorShape Id="d05b3eff-2e05-41f4-a98a-02409643a0e5" absoluteBounds="0.75, 4.625, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="84b7e528-ac10-4d67-8c59-1595b7b5975d" LastKnownName="Library worker" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseDependencyConnector edgePoints="[(1.25 : 4.875); (4 : 4.875)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <dependencyMoniker Id="620c2093-61e6-4eba-a7fd-3fb1e0f6a321" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="d05b3eff-2e05-41f4-a98a-02409643a0e5" />
+        <useCaseShapeMoniker Id="edaaa0a8-7604-49dc-9fac-95da9936c76f" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="6260fa0b-89a8-4cc3-8fd4-bb1d3eec925a" absoluteBounds="2.125, 2.75, 1.875, 0.625" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="4b5e513f-064d-4ace-95d9-c4b57462e350" LastKnownName="Check if reader exists" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(4.52770058884566 : 4.63623396579719); (3.34037426394293 : 3.36095754275351)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="0e7916fe-dd0d-4287-a959-a5468b48329b" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="edaaa0a8-7604-49dc-9fac-95da9936c76f" />
+        <useCaseShapeMoniker Id="6260fa0b-89a8-4cc3-8fd4-bb1d3eec925a" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="74de71f3-bc94-4e69-afbe-704b94ce4221" absoluteBounds="5.875, 3.25, 1.5, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="335b0394-187d-465b-a1f6-23a872827b00" LastKnownName="Check input data" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(5.06035220822589 : 4.64740838063435); (6.31464779177411 : 3.72759161936565)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="b51e016e-d7d2-4ddc-abc5-68dac71a8cc5" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="edaaa0a8-7604-49dc-9fac-95da9936c76f" />
+        <useCaseShapeMoniker Id="74de71f3-bc94-4e69-afbe-704b94ce4221" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="7ad1756c-4f86-423d-b69a-0c5c5c7c6691" absoluteBounds="8.75, 3.25, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="1e4b1bde-81c6-4315-9c4f-222cd17ee90e" LastKnownName="Check valid name" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(7.375 : 3.5); (8.75 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="a50d069a-5960-4fc2-b0b8-a6e20b286704" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="74de71f3-bc94-4e69-afbe-704b94ce4221" />
+        <useCaseShapeMoniker Id="7ad1756c-4f86-423d-b69a-0c5c5c7c6691" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="b1b8bfb7-8710-4e4f-94de-e2d235311f0c" absoluteBounds="5.375, 1.75, 1.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="20dd1403-6330-4624-8157-5778517ab495" LastKnownName="Check address" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(6.52182372154398 : 3.25237693170556); (6.10274936706585 : 2.24659848095804)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="de019394-b5eb-43fb-883e-a43e92725783" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="74de71f3-bc94-4e69-afbe-704b94ce4221" />
+        <useCaseShapeMoniker Id="b1b8bfb7-8710-4e4f-94de-e2d235311f0c" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="b4946830-a628-4f03-bf45-4ab23dfa42b9" absoluteBounds="8.125, 1.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="beb00060-7936-4ff1-aac6-879ac0a19609" LastKnownName="Check phone" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(6.95220512988953 : 3.27504647320095); (8.33091415116248 : 2.3271840210758)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="9a8a09a1-71d4-42b5-a8d2-5179e83d6641" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="74de71f3-bc94-4e69-afbe-704b94ce4221" />
+        <useCaseShapeMoniker Id="b4946830-a628-4f03-bf45-4ab23dfa42b9" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="73d38c0d-f608-40ef-9b20-0a801524af59" absoluteBounds="7.375, 5.375, 1.625, 0.625" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="93837fc7-c106-45fd-941c-24d93e6cd21d" LastKnownName="Create new reader" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(5.36179966830647 : 5.01960719432698); (7.49526846297164 : 5.52388163670239)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="d846c8f6-6a0f-40ae-96f2-aa71b174e63a" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="edaaa0a8-7604-49dc-9fac-95da9936c76f" />
+        <useCaseShapeMoniker Id="73d38c0d-f608-40ef-9b20-0a801524af59" />
+      </nodes>
+    </includeConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

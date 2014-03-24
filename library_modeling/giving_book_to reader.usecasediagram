@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="31226eda-bd8c-49bc-8256-856867c5533f" name="GiveBookToReader" linkedPackageId="b422caac-445f-4e16-b95d-9dc8687e5220" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="04b90c9f-5ee0-470c-a8b0-c8149671f042">
+      <profileInstance Id="dac08b15-7186-42b8-9ba3-3241f3aee18b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2dd47307-1b47-442a-a57e-4aea206bcc3e">
+      <profileInstance Id="8a952e8b-803d-470f-924e-bb517f2c51e7" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="47864938-2235-444d-9cd1-d7e50ffaf00d" name="Reader" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0eef351c-ed82-4fe4-8336-ce8aacc450aa" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0ed5fbe1-8735-406f-a9ef-a4aea6f6e9ad" name="Give Book to Reader" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="93b15787-eece-4a72-85c8-126e4cb58c8b" />
+        <additions>
+          <include Id="8c50134b-8ae3-4a0a-968a-9c7e8f13e789">
+            <useCaseMoniker Id="815bc39a-9d29-45b3-97e4-06fd9ce846ff" LastKnownName="Autorize as admin" />
+            <elementDefinition Id="9e9632f8-cac3-4cfd-a4d6-c5f2df5e8451" />
+          </include>
+          <include Id="ae8990af-8b8c-4014-bef8-59286e9f0ae0">
+            <useCaseMoniker Id="a980b5eb-2d2e-43cb-9725-e466060ba4c6" LastKnownName="Find user profile" />
+            <elementDefinition Id="4a2e9f6a-9680-48c2-83c7-9e973a009f57" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="03976f78-8e8f-45df-814f-31fe6bcb5854" name="Worker" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c6456430-a1f1-4916-9515-d25c9385b0f9" />
+        <suppliersInternal>
+          <dependency Id="1cbcfb10-d45f-4c23-a278-75e6eb62695a">
+            <useCaseMoniker Id="0ed5fbe1-8735-406f-a9ef-a4aea6f6e9ad" LastKnownName="Give Book to Reader" />
+            <elementDefinition Id="d55115a8-2271-45f0-9195-65aab52f754b" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="815bc39a-9d29-45b3-97e4-06fd9ce846ff" name="Autorize as admin" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f34cff3d-50c8-41a6-954c-bf2d6bf7a523" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a980b5eb-2d2e-43cb-9725-e466060ba4c6" name="Find user profile" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fd2573cd-0b01-483f-a9dc-ca064ba00ed5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="574d43e2-9f50-44a3-b51a-8dc2ecf44217" name="Find books" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7fc2254a-c6d4-4ac8-8b6e-b16fae844f67" />
+        <extendedCases>
+          <extend Id="18bd5298-d469-4ef7-a1e3-d6d8c54c6e31">
+            <useCaseMoniker Id="a980b5eb-2d2e-43cb-9725-e466060ba4c6" LastKnownName="Find user profile" />
+            <elementDefinition Id="38c18439-9689-4fd1-8389-d8fd3b8e15be" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c6807d7b-29ba-42ce-a356-e527f344b5b2" name="Watch recommendation" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c2d1bee3-8c80-40a2-86ab-cf74e14facea" />
+        <extendedCases>
+          <extend Id="fc307075-dbea-4ea5-a6ef-c2ae364b73df">
+            <useCaseMoniker Id="a980b5eb-2d2e-43cb-9725-e466060ba4c6" LastKnownName="Find user profile" />
+            <elementDefinition Id="a729973d-7106-49d8-907f-5ca26e6ddc9f" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a76222c6-af38-41f3-9b83-41d9946eca16" name="Add book to user profile and give it to him" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="96d481db-fd41-496e-9c7e-2f19dfdf9d5e" />
+        <extendedCases>
+          <extend Id="d98935cc-46e9-4889-879a-d11290dec079">
+            <useCaseMoniker Id="574d43e2-9f50-44a3-b51a-8dc2ecf44217" LastKnownName="Find books" />
+            <elementDefinition Id="f46ab9b7-0306-45ab-a311-4e665000d0ce" />
+          </extend>
+          <extend Id="bbc301de-0533-4f0d-980f-b08514d806df">
+            <useCaseMoniker Id="c6807d7b-29ba-42ce-a356-e527f344b5b2" LastKnownName="Watch recommendation" />
+            <elementDefinition Id="a224ef4c-6711-4ccc-9a93-6c3bb347775a" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="b422caac-445f-4e16-b95d-9dc8687e5220" name="library_modeling">
+    <elementDefinition Id="3d0f8a18-be1e-44bb-9429-5168ba9ab6c4" />
+  </package>
+</useCaseModelRoot>

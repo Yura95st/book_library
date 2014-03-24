@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="finding_book_in_librarry">
+  <useCaseModelRootMoniker Id="dfe44fc5-0aa6-431f-8906-a5857c82eca8" />
+  <nestedChildShapes>
+    <actorShape Id="d23dce18-ea24-444d-ad2c-aaf01d96e603" absoluteBounds="2.75, 1.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="a1707d80-f514-4cc7-b6c0-1716791bfe6f" LastKnownName="User" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="171e446c-9d0f-4450-abe4-edc36c23ff13" absoluteBounds="0.5, 2, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="d20728a7-45fe-4f10-8d43-3197cabaf5de" LastKnownName="Look up for books availability" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(2.75 : 1.71875); (1.44721359549996 : 2.20729490168752)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="59c34dda-6a75-4b0b-91f3-5845a635bb82" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="d23dce18-ea24-444d-ad2c-aaf01d96e603" />
+        <useCaseShapeMoniker Id="171e446c-9d0f-4450-abe4-edc36c23ff13" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="8c563692-ba5b-4f39-8f69-34bb0cf7b3d8" absoluteBounds="3.875, 2, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="b158cb9b-53e6-46d2-9154-48f3c558ee20" LastKnownName="Authoriation" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(3.25 : 1.73863636363636); (4.00502996330203 : 2.08183180150092)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="729e9175-cb7c-4ac0-aca0-25c353ec6e1b" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="d23dce18-ea24-444d-ad2c-aaf01d96e603" />
+        <useCaseShapeMoniker Id="8c563692-ba5b-4f39-8f69-34bb0cf7b3d8" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="7e44077d-6d68-437c-9dad-970d8daf58ef" absoluteBounds="6.375, 2.25, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="8da509ce-9e0e-4aa7-ad7e-9e52a73c7d79" LastKnownName="Find Books" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(6.38470966215454 : 2.45097096621545); (4.86529033784546 : 2.29902903378455)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="0a23c800-2cd4-4cf5-be5a-48a578dcabe6" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="7e44077d-6d68-437c-9dad-970d8daf58ef" />
+        <useCaseShapeMoniker Id="8c563692-ba5b-4f39-8f69-34bb0cf7b3d8" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="9633da7e-faa2-4cf3-8a53-94fb07cca238" absoluteBounds="4.875, 0.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="5f6a0ee2-78f6-4842-b9dd-a21db85a191d" LastKnownName="Search by Title" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(5.59860679774998 : 1.22360679774998); (6.65139320225002 : 2.27639320225002)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="d5c85845-accc-42fc-b300-c688a2b8068e" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="9633da7e-faa2-4cf3-8a53-94fb07cca238" />
+        <useCaseShapeMoniker Id="7e44077d-6d68-437c-9dad-970d8daf58ef" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="57f13076-d0ae-43b9-ab7a-4f0427c5e5c9" absoluteBounds="6.75, 0.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="35a9a628-7e3d-410f-b8e0-7331a3461704" LastKnownName="Search By Author Name" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(7.1879826327054 : 1.24806946917842); (6.9370173672946 : 2.25193053082158)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="4b3a9c5a-be1e-4831-9aec-3602b07e8b87" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="57f13076-d0ae-43b9-ab7a-4f0427c5e5c9" />
+        <useCaseShapeMoniker Id="7e44077d-6d68-437c-9dad-970d8daf58ef" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="260a505d-9392-412c-85c5-d4bb6ad0fad2" absoluteBounds="9.375, 3.25, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="a7a7472a-e1c1-4e7f-bec3-27998ebb4fa5" LastKnownName="Search By Pub Year" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(9.45897485283108 : 3.36132495094369); (7.29102514716892 : 2.63867504905631)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="ed27d649-33f6-4ebf-9337-5da0c9dcc170" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="260a505d-9392-412c-85c5-d4bb6ad0fad2" />
+        <useCaseShapeMoniker Id="7e44077d-6d68-437c-9dad-970d8daf58ef" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="92cca1fc-e306-4ad4-9fa7-efd45e485328" absoluteBounds="8.875, 1.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="b33cc4a4-a9ea-4fe1-8864-416229c29849" LastKnownName="Search by ISBN" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(8.91076165455737 : 2.09284766908853); (7.33923834544263 : 2.40715233091147)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="713a1b0f-e3ec-4193-9947-27e0ad948364" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="92cca1fc-e306-4ad4-9fa7-efd45e485328" />
+        <useCaseShapeMoniker Id="7e44077d-6d68-437c-9dad-970d8daf58ef" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="80381466-c305-4aa3-9e96-6d91a189bdac" absoluteBounds="5.375, 3.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="ac4ff16f-04cd-4eff-b430-9b200ba894fa" LastKnownName="Combined Search" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(6.06069533817705 : 3.51788082727869); (6.68930466182295 : 2.73211917272131)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="58ccb82c-75dc-4849-b2e7-b845a055a4da" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="80381466-c305-4aa3-9e96-6d91a189bdac" />
+        <useCaseShapeMoniker Id="7e44077d-6d68-437c-9dad-970d8daf58ef" />
+      </nodes>
+    </extendConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

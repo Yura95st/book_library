@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="01e92b7b-2e59-401e-83ba-2f4a411247b5" name="new_reader_registration" linkedPackageId="4c62dd55-6b01-414e-8bdf-da1246fe8c83" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d5dde8f1-7680-4a11-aed6-99eb9a10be96" name="Register new reader" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="15491ca3-398d-4a9e-9967-85c285ec7f32" />
+        <additions>
+          <include Id="0e7916fe-dd0d-4287-a959-a5468b48329b">
+            <useCaseMoniker Id="4b5e513f-064d-4ace-95d9-c4b57462e350" LastKnownName="Check if reader exists" />
+            <elementDefinition Id="1427fa89-467c-4807-8ff9-0a0bfe02f72a" />
+          </include>
+          <include Id="b51e016e-d7d2-4ddc-abc5-68dac71a8cc5">
+            <useCaseMoniker Id="335b0394-187d-465b-a1f6-23a872827b00" LastKnownName="Check input data" />
+            <elementDefinition Id="334d6e83-b9b3-4b89-810b-5ac15d48d80e" />
+          </include>
+          <include Id="d846c8f6-6a0f-40ae-96f2-aa71b174e63a">
+            <useCaseMoniker Id="93837fc7-c106-45fd-941c-24d93e6cd21d" LastKnownName="Create new reader" />
+            <elementDefinition Id="496b2586-81db-4083-b1f3-0f7f49e2931c" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="84b7e528-ac10-4d67-8c59-1595b7b5975d" name="Library worker" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0b0e315b-5f04-4e1a-9d6f-92203982e7b1" />
+        <suppliersInternal>
+          <dependency Id="620c2093-61e6-4eba-a7fd-3fb1e0f6a321">
+            <useCaseMoniker Id="d5dde8f1-7680-4a11-aed6-99eb9a10be96" LastKnownName="Register new reader" />
+            <elementDefinition Id="a7a12241-3d32-47da-b5a1-428469c6fb4f" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4b5e513f-064d-4ace-95d9-c4b57462e350" name="Check if reader exists" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="179f37e3-2e2a-460a-937c-26673a6e3f30" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="335b0394-187d-465b-a1f6-23a872827b00" name="Check input data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a88fa5ee-1bb0-4de7-9623-f6af44eb0211" />
+        <additions>
+          <include Id="a50d069a-5960-4fc2-b0b8-a6e20b286704">
+            <useCaseMoniker Id="1e4b1bde-81c6-4315-9c4f-222cd17ee90e" LastKnownName="Check valid name" />
+            <elementDefinition Id="29b5ef21-40e6-4a23-814e-c4feb08fdb97" />
+          </include>
+          <include Id="9a8a09a1-71d4-42b5-a8d2-5179e83d6641">
+            <useCaseMoniker Id="beb00060-7936-4ff1-aac6-879ac0a19609" LastKnownName="Check phone" />
+            <elementDefinition Id="495ef77d-a76e-4388-9b29-d6b5911247ab" />
+          </include>
+          <include Id="de019394-b5eb-43fb-883e-a43e92725783">
+            <useCaseMoniker Id="20dd1403-6330-4624-8157-5778517ab495" LastKnownName="Check address" />
+            <elementDefinition Id="c65c1404-ac8c-41c1-b2f2-1d1a539f75fc" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1e4b1bde-81c6-4315-9c4f-222cd17ee90e" name="Check valid name" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3800a3e2-8283-4c05-80d3-e38d0198d72d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="20dd1403-6330-4624-8157-5778517ab495" name="Check address" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9f4bb700-bb52-49d2-aedb-e076bfbea6b6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="beb00060-7936-4ff1-aac6-879ac0a19609" name="Check phone" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7d96eed2-48ae-419e-a2dc-b8c2277bc0e7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="93837fc7-c106-45fd-941c-24d93e6cd21d" name="Create new reader" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="05738c74-5fd6-4682-95d7-e3cea9880b23" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="4c62dd55-6b01-414e-8bdf-da1246fe8c83" name="library_modeling">
+    <elementDefinition Id="3d0f8a18-be1e-44bb-9429-5168ba9ab6c4" />
+    <profileInstances>
+      <packageHasProfileInstances Id="52b6f066-f95b-447a-90bc-542badebd988">
+        <profileInstance Id="3e8a3a51-7af2-4fe7-ba20-dd986d84802e" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="55b2a330-2d22-440e-bbb7-8827374ef029">
+        <profileInstance Id="77e5d2ef-813c-43bc-8756-6611b7564207" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
