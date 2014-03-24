@@ -1,21 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{54036D76-D7BF-444B-B635-B4B5367F10B1}</ProjectGuid>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D6370B0-B6A8-4C62-B726-8F8AE51B0880}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>library</RootNamespace>
-    <AssemblyName>library</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AssemblyName>SimpleMVVMExample</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,8 +26,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -53,13 +55,67 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\BookSearchViewModel.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="Views\BookSearchView.xaml.cs">
-      <DependentUpon>BookSearchView.xaml</DependentUpon>
+    <Compile Include="ViewModels\ApplicationViewModel.cs" />
+    <Compile Include="HelperClasses\ObservableObject.cs" />
+    <Compile Include="ViewModels\Authors\AuthorsViewModel.cs" />
+    <Compile Include="ViewModels\Publishers\PublishersViewModel.cs" />
+    <Compile Include="Views\Authors\AddNewAuthorView.xaml.cs">
+      <DependentUpon>AddNewAuthorView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\MainWindow.xaml">
+    <Compile Include="Views\Authors\AuthorsView.xaml.cs">
+      <DependentUpon>AuthorsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Authors\EditAuthorInfoView.xaml.cs">
+      <DependentUpon>EditAuthorInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Books\AddNewBookView.xaml.cs">
+      <DependentUpon>AddNewBookView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Books\EditBookInfoView.xaml.cs">
+      <DependentUpon>EditBookInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\RelayCommand.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Books\BooksViewModel.cs" />
+    <Compile Include="Views\LeftNavigationPanel.xaml.cs">
+      <DependentUpon>LeftNavigationPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Books\BooksView.xaml.cs">
+      <DependentUpon>BooksView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Publishers\AddNewPublisherView.xaml.cs">
+      <DependentUpon>AddNewPublisherView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Publishers\EditPublisherInfoView.xaml.cs">
+      <DependentUpon>EditPublisherInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Publishers\PublishersView.xaml.cs">
+      <DependentUpon>PublishersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToLogInView.xaml.cs">
+      <DependentUpon>ToLogInView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\Authors\AddNewAuthorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Authors\AuthorsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Authors\EditAuthorInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Books\AddNewBookView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Books\EditBookInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ApplicationView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -67,14 +123,33 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Commands\RelayCommand.cs" />
-    <Compile Include="Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Views\ApplicationView.xaml.cs">
+      <DependentUpon>ApplicationView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\BookSearchView.xaml">
+    <Page Include="Views\LeftNavigationPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Books\BooksView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Publishers\AddNewPublisherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Publishers\EditPublisherInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Publishers\PublishersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ToLogInView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -95,15 +170,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
