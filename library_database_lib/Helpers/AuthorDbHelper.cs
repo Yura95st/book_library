@@ -8,11 +8,12 @@ namespace library_database_lib.Helpers
 {
     public class AuthorDbHelper
     {
-        private string connectionString;
+        private SqlConnection connection;
 
         public AuthorDbHelper(string connectionString)
         {
-            this.connectionString = connectionString;
+            connection = new SqlConnection();
+            this.connection.ConnectionString = connectionString;
         }
 
         // gets author by it's id number
@@ -46,7 +47,7 @@ namespace library_database_lib.Helpers
         }
 
         // returns Author object from the query result - dataReader
-        private Author GetAuthorFromQueryResult(DbDataReader dataReader)
+        public static Author GetAuthorFromQueryResult(DbDataReader dataReader)
         {
             throw new NotImplementedException();
         }

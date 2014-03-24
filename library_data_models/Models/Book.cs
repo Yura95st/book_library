@@ -54,11 +54,5 @@ namespace library_data_models.Models
             get;
             set;
         }
-
-        public double Rate
-        {
-            get;
-            set;
-        }
     }
 }

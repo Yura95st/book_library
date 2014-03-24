@@ -8,11 +8,12 @@ namespace library_database_lib.Helpers
 {
     public class ReaderDbHelper
     {
-        private string connectionString;
+        private SqlConnection connection;
 
         public ReaderDbHelper(string connectionString)
         {
-            this.connectionString = connectionString;
+            connection = new SqlConnection();
+            this.connection.ConnectionString = connectionString;
         }
 
         // gets all readers of the library
@@ -41,18 +42,6 @@ namespace library_database_lib.Helpers
 
         // gets readers by searching parameters
         public List<Reader> SearchForReaders(string firstName, string lastName, string phone = "")
-        {
-            throw new NotImplementedException();
-        }
-
-        // gets reader's list of book rates
-        //public List<Reader> GetReaderBookRates(int readerId)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        // creates new reader's book rate (from 1 to 5) and returns it's id number
-        public int CreateNewReaderBookRate(int readerId, int bookId, int rate)
         {
             throw new NotImplementedException();
         }
@@ -109,7 +98,7 @@ namespace library_database_lib.Helpers
         }
 
         // returns Reader object from the query result - dataReader
-        private Reader GetReaderFromQueryResult(DbDataReader dataReader)
+        public static Reader GetReaderFromQueryResult(DbDataReader dataReader)
         {
             throw new NotImplementedException();
         }
