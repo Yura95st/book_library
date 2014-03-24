@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,11 +15,11 @@ using System.Windows.Shapes;
 namespace library.Views
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for EditAuthorInfoView.xaml
     /// </summary>
-    public partial class BookSearchView : UserControl
+    public partial class EditAuthorInfoView : UserControl
     {
-        public BookSearchView()
+        public EditAuthorInfoView()
         {
             InitializeComponent();
         }
